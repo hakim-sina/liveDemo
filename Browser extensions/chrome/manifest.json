@@ -1,0 +1,19 @@
+{
+  "name": "liveDemo",
+  "version": "0.3",
+  "description": "Gets information from Google.",
+  "icons": { "128": "icon_128.png" },
+  "background_page": "bg.html",
+  "permissions": ["http://*/*"],
+  "browser_action": {
+    "default_title": "liveDemo",
+    "default_icon": "icon_24.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com.au/*"],
+      "js": ["sid.js","livedemo.js"]
+    }
+  ]
+}
